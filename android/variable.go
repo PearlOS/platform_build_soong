@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"du/soong/android"
+	"pearl/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -127,8 +127,8 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
-		// include DU variables
-		Du android.Product_variables
+		// include Pearl variables
+		Pearl android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -293,8 +293,8 @@ type productVariables struct {
 
 	TargetFSConfigGen []string `json:",omitempty"`
 
-	// include DU variables
-	Du android.ProductVariables
+	// include PEARL variables
+	Pearl android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
