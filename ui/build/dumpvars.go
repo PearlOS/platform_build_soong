@@ -99,6 +99,7 @@ var BannerVars = []string{
 	"TARGET_2ND_ARCH",
 	"TARGET_2ND_ARCH_VARIANT",
 	"TARGET_2ND_CPU_VARIANT",
+	"PRODUCT_SOONG_NAMESPACES",
 	"TARGET_GCC_VERSION ",
 	"HOST_ARCH",
 	"HOST_2ND_ARCH",
@@ -149,8 +150,8 @@ func Banner(make_vars map[string]string) string {
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_ARCH", make_vars["TARGET_2ND_ARCH"])
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_ARCH_VARIANT", make_vars["TARGET_2ND_ARCH_VARIANT"])
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_CPU_VARIANT", make_vars["TARGET_2ND_CPU_VARIANT"])
+        fmt.Fprintf(b, "%s=%s\n", "PRODUCT_SOONG_NAMESPACES", make_vars["PRODUCT_SOONG_NAMESPACES"])
 	fmt.Fprintln(b, "=============================================================")
-
 	return b.String()
 }
 
